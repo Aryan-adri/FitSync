@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/exercise_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exercise Name"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:id="@+id/duration_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration (minutes)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/exercise_input"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/calories_burned_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calories Burned"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/duration_input"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/log_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Workout"
+        android:layout_below="@id/calories_burned_input"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/log_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logged Workout: "
+        android:textSize="18sp"
+        android:layout_below="@id/log_button"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
