@@ -17,7 +17,7 @@ public class WaterIntakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_intake);
 
-        waterInput = findViewById(R.id.water_input);
+        waterInput = findViewById(R.id.water_intake_button);
         logButton = findViewById(R.id.log_button);
         intakeResult = findViewById(R.id.intake_result);
 
