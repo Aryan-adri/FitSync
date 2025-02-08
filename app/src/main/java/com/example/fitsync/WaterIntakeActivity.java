@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WaterIntakeActivity extends AppCompatActivity {
 
-    EditText waterInput;
+    EditText waterinput;
     Button logButton;
     TextView intakeResult;
 
@@ -17,7 +17,7 @@ public class WaterIntakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_intake);
 
-        waterInput = findViewById(R.id.water_intake);
+        waterinput = findViewById(R.id.water_intake);
         //logButton = findViewById(R.id.log_button);
         //intakeResult = findViewById(R.id.intake_result);
 
@@ -30,7 +30,7 @@ public class WaterIntakeActivity extends AppCompatActivity {
     }
 
     private void logWaterIntake() {
-        String waterAmount = waterInput.getText().toString();
+        String waterAmount = waterinput.getText().toString();
 
         if (!waterAmount.isEmpty()) {
             intakeResult.setText("Water Intake: " + waterAmount + " ml");
