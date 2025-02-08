@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         bmiButton = findViewById(R.id.bmi_button);
         workoutLogButton = findViewById(R.id.workout_log_button);
-        waterIntakeButton = findViewById(R.id.water_intake_button);
+        waterIntakeButton = findViewById(R.id.water_intake);
 
         bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,18 +8,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WaterIntakeActivity extends AppCompatActivity {
 
-    private EditText waterInput;
-    private Button logButton;
-    private TextView intakeResult;
+    EditText waterInput;
+    Button logButton;
+    TextView intakeResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_intake);
 
-        waterInput = findViewById(R.id.water_intake_button);
-        logButton = findViewById(R.id.log_button);
-        intakeResult = findViewById(R.id.intake_result);
+        waterInput = findViewById(R.id.water_intake);
+        //logButton = findViewById(R.id.log_button);
+        //intakeResult = findViewById(R.id.intake_result);
 
         logButton.setOnClickListener(new View.OnClickListener() {
             @Override
