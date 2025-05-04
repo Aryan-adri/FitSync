@@ -1,54 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/height_input"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Height (meters)"
-        android:inputType="numberDecimal"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp" />
-
-    <EditText
-        android:id="@+id/weight_input"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Weight (kilograms)"
-        android:inputType="numberDecimal"
-        android:layout_below="@id/height_input"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate BMI"
-        android:layout_below="@id/weight_input"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:padding="24dp">
 
-    <TextView
-        android:id="@+id/bmi_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BMI: "
-        android:textSize="18sp"
-        android:layout_below="@id/calculate_button"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true" />
+        <EditText
+            android:id="@+id/height_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter height in meters"
+            android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/bmi_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category: "
-        android:textSize="18sp"
-        android:layout_below="@id/bmi_result"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true" />
+        <EditText
+            android:id="@+id/weight_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter weight in kg"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/height_input"
+            android:layout_marginTop="16dp" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate BMI"
+            android:layout_below="@id/weight_input"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/bmi_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI: "
+            android:textSize="18sp"
+            android:layout_below="@id/calculate_button"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/bmi_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: "
+            android:textSize="18sp"
+            android:layout_below="@id/bmi_result"
+            android:layout_marginTop="8dp" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/bmi_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/bmi_category"
+            android:layout_marginTop="24dp" />
+
+    </RelativeLayout>
+</ScrollView>

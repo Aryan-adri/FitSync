@@ -21,37 +21,26 @@ public class MainActivity extends AppCompatActivity {
         bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openBMIActivity();
+                Intent intent = new Intent(MainActivity.this, BMICalculator.class);
+                startActivity(intent);
             }
         });
 
         workoutLogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWorkoutLogActivity();
+                Intent intent = new Intent(MainActivity.this, WorkoutType.class);
+                startActivity(intent);
             }
         });
 
         waterIntakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openWaterIntakeActivity();
+                Intent intent = new Intent(MainActivity.this, WaterIntakeActivity.class);
+                startActivity(intent);
             }
         });
     }
 
-    private void openBMIActivity() {
-        Intent intent = new Intent(MainActivity.this, BMICalculator.class);
-        startActivity(intent);
-    }
-
-    private void openWorkoutLogActivity() {
-        Intent intent = new Intent(MainActivity.this, WorkoutLogActivity.class);
-        startActivity(intent);
-    }
-
-    private void openWaterIntakeActivity() {
-        Intent intent = new Intent(MainActivity.this, WaterIntakeActivity.class);
-        startActivity(intent);
-    }
 }
